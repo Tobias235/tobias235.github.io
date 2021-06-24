@@ -1,0 +1,94 @@
+*, *::before *::after {
+    box-sizing: border-box;
+}
+
+body {
+  background-image: url("../pictures/background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:#464646;
+  height: 100vh;
+  margin: 0;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    a {
+        font-size: 22px;
+        text-decoration: none;
+        color: white;
+        margin: 15px;
+    }
+}
+
+.main-content {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+
+    .main-quote {
+        width: 90%;
+        height: 40%;
+        padding-bottom: 42vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .main-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    h1 {
+        color: white;
+        font-size: 50px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        color: white;
+        margin: 0;
+        margin-right: 40px;
+    }
+}
+
+
+
+
+.about-content {
+    height: 100vh;
+    width: 100%;
+    padding: 70px 0;
+    
+    .header {
+        width: 70%;
+        padding-top: 50px;
+        text-align: center;
+        
+        h1 {
+            font-size: 50px;
+        }
+    }
+    .about-information {
+        width: 60%;
+        margin: auto;
+
+        .technical-skills-box {
+            width: 40%;
+            height: 200px;
+            margin: auto;
+            border: 5px solid black;
+        }
+    }
+}
