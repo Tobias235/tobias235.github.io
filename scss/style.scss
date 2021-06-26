@@ -7,7 +7,7 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color:#464646;
+  background-color:white;
   height: 100vh;
   margin: 0;
 }
@@ -34,24 +34,44 @@ body {
     height: 100%;
     margin: auto;
 
-    .main-quote {
+    .first-quote {
         width: 90%;
-        height: 40%;
-        padding-bottom: 42vh;
+        height: 45%;
         display: flex;
         align-items: center;
+        font-size: 17px;
     }
 
     .main-text {
         width: 100%;
+        height: 35%;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    .second-quote {
+        width: 100%;
+        text-align: end;
+        font-size: 15px;
+    }
+
+    .quote-author {
+        font-size: 15px;
+        font-style: italic;
+        color: white;
+    }
+
+    #quote-author {
+        font-size: 17px;
+        font-style: italic;
+        color: white;
+        text-align: end;
     }
 
     h1 {
         color: white;
-        font-size: 50px;
         margin: 0;
         margin-bottom: 10px;
     }
@@ -60,35 +80,79 @@ body {
         color: white;
         margin: 0;
         margin-right: 40px;
+        font-size: 25px;
     }
 }
 
 
+#aboutMe {
+    height: 100vh;
+    width: 100%;
+    padding: 70px 0px;
+    
+    .about-information {
+        width: 50%;
+        margin: auto;
 
+        h1 {
+            font-size: 30px;
+            width: 100%;
+            text-align: center;
+        }
 
-.about-content {
+        .technical-skills-box {
+            width: 100%;
+            height: 75px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding-bottom: 35px;
+        }
+    }
+}
+
+#projects {
     height: 100vh;
     width: 100%;
     padding: 70px 0;
-    
-    .header {
-        width: 70%;
-        padding-top: 50px;
-        text-align: center;
-        
-        h1 {
-            font-size: 50px;
-        }
-    }
-    .about-information {
-        width: 60%;
-        margin: auto;
 
-        .technical-skills-box {
-            width: 40%;
-            height: 200px;
-            margin: auto;
-            border: 5px solid black;
+    .projects-container {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        padding-bottom: 50px;
+
+        .project-information {
+            width: 30%;
+            display: flex;
+            align-items: flex-end;
+            padding-left: 80px;
+
+            div {
+                flex-direction: column;
+            }
         }
+
     }
+}
+
+.header {
+    width: 60%;
+    padding-top: 50px;
+    text-align: center;
+    
+    h1 {
+        font-size: 50px;
+    }
+}
+
+.bottom-border {
+    border-bottom: 3px solid #ececec;
+    width: 100%;
+}
+
+button {
+    width: 135px;
+    height: 30px;
 }
