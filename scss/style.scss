@@ -1,158 +1,199 @@
 *, *::before *::after {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  background-image: url("../pictures/background.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color:white;
-  height: 100vh;
-  margin: 0;
+ background-image: url("../pictures/background.jpg");
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-color:white;
+ height: 100vh;
+ margin: 0;
 }
 
 .navbar {
-    position: fixed;
-    display: flex;
-    height: 80px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    a {
-        font-size: 22px;
-        text-decoration: none;
-        color: white;
-        margin: 15px;
-    }
+	position: fixed;
+	display: flex;
+	height: 80px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .main-content {
-    width: 90%;
-    height: 100%;
-    margin: auto;
+	width: 90%;
+	height: 100%;
+	margin: auto;
 
-    .first-quote {
-        width: 90%;
-        height: 45%;
-        display: flex;
-        align-items: center;
-        font-size: 17px;
-    }
+	.first-quote {
+		 width: 90%;
+		 height: 45%;
+		 display: flex;
+		 align-items: center;
+		 font-size: 17px;
+	}
 
-    .main-text {
-        width: 100%;
-        height: 35%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 30px;
-    }
+	.main-text {
+		 width: 100%;
+		 height: 35%;
+		 display: flex;
+		 flex-direction: column;
+		 align-items: center;
+		 font-size: 30px;
+	}
 
-    .second-quote {
-        width: 100%;
-        text-align: end;
-        font-size: 15px;
-    }
+	.second-quote {
+		 width: 100%;
+		 text-align: end;
+		 font-size: 15px;
+	}
 
-    .quote-author {
-        font-size: 15px;
-        font-style: italic;
-        color: white;
-    }
+	.quote-author {
+		 font-size: 15px;
+		 font-style: italic;
+		 color: white;
+	}
 
-    #quote-author {
-        font-size: 17px;
-        font-style: italic;
-        color: white;
-        text-align: end;
-    }
+	#quote-author {
+		 font-size: 17px;
+		 font-style: italic;
+		 color: white;
+		 text-align: end;
+	}
 
-    h1 {
-        color: white;
-        margin: 0;
-        margin-bottom: 10px;
-    }
+	h1 {
+		 color: white;
+		 margin: 0;
+		 margin-bottom: 10px;
+	}
 
-    h2 {
-        color: white;
-        margin: 0;
-        margin-right: 40px;
-        font-size: 25px;
-    }
+	h2 {
+		 color: white;
+		 margin: 0;
+		 margin-right: 40px;
+		 font-size: 25px;
+	}
 }
 
 
 #aboutMe {
-    height: 100vh;
-    width: 100%;
-    padding: 70px 0px;
-    
-    .about-information {
-        width: 50%;
-        margin: auto;
+	height: 100vh;
+	width: 100%;
+	padding: 70px 0px;
+	
+	.about-information {
+		 width: 50%;
+		 margin: auto;
 
-        h1 {
-            font-size: 30px;
-            width: 100%;
-            text-align: center;
-        }
+		 h1 {
+			  font-size: 30px;
+			  width: 100%;
+			  text-align: center;
+		 }
 
-        .technical-skills-box {
-            width: 100%;
-            height: 75px;
-            margin: auto;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding-bottom: 35px;
-        }
-    }
+		 .technical-skills-box {
+			  width: 100%;
+			  height: 75px;
+			  margin: auto;
+			  display: flex;
+			  justify-content: center;
+			  margin: 0;
+			  padding-bottom: 35px;
+		 }
+	}
 }
 
 #projects {
-    height: 100vh;
-    width: 100%;
-    padding: 70px 0;
+	height: 100vh;
+	width: 100%;
+	padding: 70px 0;
 
-    .projects-container {
-        width: 50%;
-        margin: auto;
-        display: flex;
-        padding-bottom: 50px;
+	.projects-container {
+		 width: 50%;
+		 margin: auto;
+		 display: flex;
+		 padding-bottom: 50px;
 
-        .project-information {
-            width: 30%;
-            display: flex;
-            align-items: flex-end;
-            padding-left: 80px;
+		 .project-information {
+			  width: 30%;
+			  display: flex;
+			  align-items: flex-end;
+			  padding-left: 80px;
 
-            div {
-                flex-direction: column;
-            }
-        }
-
-    }
+			  div {
+					flex-direction: column;
+			  }
+		 }
+	}
 }
 
-.header {
-    width: 60%;
-    padding-top: 50px;
-    text-align: center;
-    
-    h1 {
-        font-size: 50px;
-    }
+.title {
+	width: 62%;
+	padding-top: 50px;
+	text-align: center;
+	
+	h1 {
+		 font-size: 50px;
+	}
 }
 
 .bottom-border {
-    border-bottom: 3px solid #ececec;
-    width: 100%;
+	border-bottom: 3px solid #ececec;
+	width: 100%;
 }
 
 button {
-    width: 135px;
-    height: 30px;
+	width: 135px;
+	height: 30px;
+}
+
+#contactMe {
+	height: 100vh;
+	width: 100%;
+	margin: auto;
+	padding: 70px 0px;
+
+	.title {
+		text-align: center;
+	}
+
+	.contact-options {
+		width: 50%;
+		margin: auto;
+		display: flex;
+		padding-bottom: 50px;
+
+		.icons {
+			display: flex;
+			flex-direction: column;
+		}
+		
+		img {
+			width: 48px;
+			margin: 12px;
+		}
+
+		.contact-information {
+			width: 100%;
+			display: flex;
+			div {
+				display: flex;
+				flex-direction: column;
+
+				a {
+					padding-top:14px;
+					color: black;
+				}
+		  }
+		}
+	}
+}
+
+a {
+	font-size: 22px;
+	text-decoration: none;
+	color: white;
+	margin: 15px;
 }
