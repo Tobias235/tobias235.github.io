@@ -154,6 +154,7 @@ button {
 	width: 100%;
 	margin: auto;
 	padding: 70px 0px;
+	background-color: gray;
 
 	.title {
 		text-align: center;
@@ -168,11 +169,15 @@ button {
 		.icons {
 			display: flex;
 			flex-direction: column;
+
+			a {
+				margin: 0;
+			}
 		}
 		
 		img {
 			width: 48px;
-			margin: 12px;
+			margin: 9px;
 		}
 
 		.contact-information {
