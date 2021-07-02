@@ -145,13 +145,15 @@ body {
     padding-bottom: 50px;
 
     .project-information {
-      width: 45%;
+      width: 30%;
       display: flex;
       align-items: flex-end;
       padding-left: 80px;
 
       div {
+        display: flex;
         flex-direction: column;
+        align-items: center;
 
         h2 {
           color: #660000;
@@ -184,7 +186,7 @@ body {
 }
 
 button {
-  width: 170px;
+  width: 200px;
   height: 40px;
   font-weight: bold;
   border: none;
