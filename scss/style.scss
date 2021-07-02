@@ -1,3 +1,7 @@
+@mixin for-phone-only {
+  @media (max-width: 1160px) { @content; }
+}
+
 *,
 *::before *::after {
   box-sizing: border-box;
@@ -8,7 +12,6 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: white;
   height: 100vh;
   margin: 0;
 }
@@ -32,6 +35,10 @@ body {
   width: 80%;
   height: 100%;
   margin: auto;
+
+  @include for-phone-only {    
+    text-align: center;
+ }
 
   .first-quote {
     width: 90%;
@@ -61,6 +68,10 @@ body {
     font-size: 15px;
     font-family: "Kalam", cursive;
     color: seashell;
+
+    @include for-phone-only {    
+      text-align: center;
+   }
   }
 
   .quote-author {
@@ -98,13 +109,20 @@ body {
   background-color: seashell;
 
   .about-information {
-    width: 35%;
+    width: 50%;
     margin: auto;
+    text-align: justify;
+    text-justify: inter-word;
+
+    @include for-phone-only {    
+      width: 70%;
+   }
 
 	p {
 		color: #660000;
     font-size: 18px;
     font-family: sans-serif;
+    text-indent: 40px;
 
     a {
       color: #660000;
@@ -144,11 +162,33 @@ body {
     display: flex;
     padding-bottom: 50px;
 
+    @include for-phone-only {    
+      width: 90%;
+      align-items: center;
+      flex-direction: column;
+   }
+
+
+   .project-picture {
+    @include for-phone-only {    
+      width: 400px;
+   }
+   }
+
     .project-information {
       width: 30%;
       display: flex;
       align-items: flex-end;
       padding-left: 80px;
+      text-align: justify;
+      text-justify: inter-word;
+
+      @include for-phone-only {   
+        width: 50%; 
+        margin: auto;
+        align-items: center;
+        padding-left: 0;
+     }
 
       div {
         display: flex;
@@ -158,6 +198,10 @@ body {
         h2 {
           color: #660000;
           font-family: sans-serif;
+          
+          @include for-phone-only {
+            font-size: 20px;
+          }
         }
 
         p {
@@ -176,7 +220,11 @@ body {
 
   h1 {
     font-size: 50px;
-	color: maroon;
+    color: maroon;
+
+    @include for-phone-only {
+      font-size: 30px;
+    }
   }
 }
 
@@ -197,6 +245,7 @@ button {
 }
 
 button:hover {
+  transition: 2s;
   background-color: rgb(253, 248, 196);
 }
 
@@ -215,6 +264,10 @@ button:hover {
     margin: auto;
     display: flex;
     padding-bottom: 50px;
+
+    @include for-phone-only {
+      width: 80%;
+    }
 
     .icons {
       display: flex;
@@ -245,6 +298,10 @@ button:hover {
           text-decoration: none;
           color:  #660000;
           margin: 15px;
+
+          @include for-phone-only {
+            font-size: 18px;
+          }
         }
       }
     }
