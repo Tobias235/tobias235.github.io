@@ -48,13 +48,15 @@
 }
 
 body {
-  height: 100vh;
   background-image: url("../pictures/background.jpg");
-  background-position: center, center;
-  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
   margin: 0;
+  overflow-x: hidden;
 }
+
 
 .navbar {
   position: fixed;
