@@ -6,6 +6,10 @@
   @media (min-width: 1161px) { @content; }
 }
 
+html,body{
+  overflow-x:  hidden;
+}
+
 *,
 *::before *::after {
   box-sizing: border-box;
