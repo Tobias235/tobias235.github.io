@@ -432,7 +432,7 @@ footer {
     padding-bottom: 50px;
 
     @include for-smaller-screen-only {
-      width: 80%;
+      width: 90%;
     }
 
     .icons {
@@ -450,7 +450,7 @@ footer {
     }
 
     .contact-information {
-      width: 100%;
+      width: 60%;
       
       div {
         display: flex;
@@ -458,9 +458,10 @@ footer {
 
         p {
           @include text;
-          padding-top: 13px;
+          padding-top: 7px;
           font-size: 22px;
           margin-top: 15px;
+          margin-left: 20px;
 
           @include for-smaller-screen-only {
             font-size: 18px;
