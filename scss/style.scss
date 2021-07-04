@@ -46,18 +46,16 @@
 *,
 *::before *::after {
   box-sizing: border-box;
+  border-right: 3px solid red;
 }
 
-body, html {
-  margin:0;
-  padding:0;
-}
-
-.wrapper {
-    height: 100vh;
-    background-image: url(../pictures/background.jpg);
-    background-size: cover;
-    background-position: top;
+body {
+  height:100vh;
+  background-image: url(../pictures/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 0;
 }
 
 
@@ -448,7 +446,7 @@ footer {
 
     img {
       width: 48px;
-      margin: 9px;
+      margin-top: 9px;
     }
 
     .contact-information {
@@ -462,7 +460,7 @@ footer {
           @include text;
           padding-top: 13px;
           font-size: 22px;
-          margin: 15px;
+          margin-top: 15px;
 
           @include for-smaller-screen-only {
             font-size: 18px;
