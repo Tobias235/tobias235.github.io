@@ -1,13 +1,50 @@
 @mixin for-smaller-screen-only {
-  @media (max-width: 1160px) { @content; }
+  @media (max-width: 1160px) {
+    @content;
+  }
 }
 
 @mixin for-desktop-only {
-  @media (min-width: 1161px) { @content; }
+  @media (min-width: 1161px) {
+    @content;
+  }
 }
 
-html,body{
-  overflow-x:  hidden;
+@mixin author {
+  font-size: 17px;
+  font-style: italic;
+  color: seashell;
+  text-align: end;
+  margin: 0;
+}
+
+@mixin main-text {
+  color: white;
+  margin: 0;
+  font-family: sans-serif, Arial;
+  text-shadow: 3px 3px black;
+}
+
+@mixin quote-style {
+  width: 100%;
+  font-size: 15px;
+  font-family: "Kalam", cursive, "sans-serif";
+  color: seashell;
+}
+
+@mixin background {
+  width: 100%;
+  background-color: seashell;
+}
+
+@mixin text {
+    color: #660000;
+    font-family: sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 *,
@@ -38,18 +75,107 @@ body {
     display: flex;
     justify-content: space-evenly;
 
-  a {
-    text-decoration: none;
-    color: white;
-    font-size: 22px;
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 22px;
+    }
+
+    a:hover {
+      transition: 1.5s;
+      color: black;
+      background-color: seashell;
+      border-radius: 10px;
+    }
   }
 }
 
-  a:hover {
-    transition: 1.5s;
-    color: black;
-    background-color: seashell;
-    border-radius: 10px;
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: seashell;
+}
+
+
+@include for-desktop-only {
+  .p-menu1 {
+    display: none;
+  }
+}
+
+@include for-smaller-screen-only {
+  .navbar {
+    display: none;
+  }
+
+  #navbar {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 65px;
+    width: 100%;
+
+    #toggle1 {
+      display: none;
+    }
+
+    .hamburger1 {
+      height: 45px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+
+      div {
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        width: 40px;
+        height: 5px;
+        margin-top: 7px;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    #toggle1:checked + .hamburger1 .top {
+      transform: rotate(-45deg);
+      margin-top: 22.5px;
+    }
+
+    #toggle1:checked + .hamburger1 .meat {
+      transform: rotate(45deg);
+      margin-top: -5px;
+    }
+
+    #toggle1:checked + .hamburger1 .bottom {
+      transform: scale(0);
+    }
+
+    #toggle1:checked ~ .menu1 {
+      height: 205px;
+      width: 30%;
+    }
+    .menu1 {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      height: 0px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+
+      a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 15px;
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+      }
+
+      a:hover {
+        background-color: #fff;
+        color: rgb(61, 61, 61);
+        transition: all 0.3s ease;
+      }
+    }
   }
 }
 
@@ -58,21 +184,18 @@ body {
   height: 100%;
   margin: auto;
 
-  @include for-smaller-screen-only {    
+  @include for-smaller-screen-only {
     text-align: center;
- }
+  }
 
   .first-quote {
-    width: 90%;
     height: 45%;
     display: flex;
     align-items: center;
-    font-size: 17px;
-    font-family: "Kalam", cursive;
-    color: seashell;
+    @include quote-style;
 
-    @include for-smaller-screen-only {    
-      height: 40%;
+    @include for-smaller-screen-only {
+      height: 38%;
     }
   }
 
@@ -83,82 +206,82 @@ body {
     flex-direction: column;
     align-items: center;
     font-size: 30px;
-    font-family: sans-serif, Arial;
-    text-shadow: 3px 3px black;
-	  color: white;
-    @include for-smaller-screen-only {    
+    @include main-text;
+
+    @include for-smaller-screen-only {
       font-size: 25px;
-      height: 40%;
+      height: 38%;
+    }
+    
+    h2 {
+      font-size: 25px;
+      @include main-text;
     }
   }
 
-
   .second-quote {
-    width: 100%;
     text-align: end;
-    font-size: 15px;
-    font-family: "Kalam", cursive;
-    color: seashell;
+    @include quote-style;
 
-    @include for-smaller-screen-only {    
+    @include for-smaller-screen-only {
       text-align: center;
-   }
+    }
   }
 
   .quote-author {
-    font-size: 15px;
-    font-style: italic;
-    color: seashell;
-    margin: 0;
+    @include author;
+    font-weight: bold;
+
+    @include for-smaller-screen-only {
+      text-align: center;
+    }
   }
 
   #quote-author {
-    font-size: 17px;
-    font-style: italic;
-    color: white;
-    text-align: end;
-    margin: 0;
+    @include author;
+
+    @include for-smaller-screen-only {
+      text-align: center;
+    }
   }
 
   h1 {
     margin: 0;
   }
+}
 
-  h2 {
-    color: white;
-    margin: 0;
-    font-size: 25px;
-    font-family: sans-serif, Arial;
-    text-shadow: 3px 3px black;
+.title {
+  width: 100%;
+  padding-top: 50px;
+  text-align: center;
+
+  h1 {
+    font-size: 50px;
+    color: maroon;
+
+    @include for-smaller-screen-only {
+      font-size: 30px;
+    }
   }
 }
 
+
 #aboutMe {
-  width: 100%;
-  background-color: seashell;
+  @include background;
 
-
-  .profile {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    div {
+    .profile {
       display: flex;
       flex-direction: column;
-      justify-content:  center;
       align-items: center;
-    }
 
     .profilePicture {
-      width: 15%;
+      width: 12%;
       border-radius: 180px;
+      margin-bottom: 5px;
 
       @include for-smaller-screen-only {    
         width: 25%;
      }
-
     }
     
     p {
@@ -177,25 +300,23 @@ body {
       width: 70%;
    }
 
-	p {
-		color: #660000;
-    font-size: 18px;
-    font-family: sans-serif;
+    p {
+      @include text;
     text-indent: 40px;
+    font-size: 18px;
 
     a {
-      color: #660000;
+      @include text;
       font-size: 18px;
-      font-family: sans-serif;
       margin: 0;
       text-decoration: underline;
     }
-	}
+    }
 
-	h1 {
-		text-align: center;
-		color: maroon;
-	}
+    h1 {
+        text-align: center;
+        color: maroon;
+    }
 
     .technical-skills-box {
       width: 100%;
@@ -209,9 +330,9 @@ body {
   }
 }
 
+
 #projects {
-  width: 100%;
-  background-color: seashell;
+@include background;
 
 
   .projects-container {
@@ -254,8 +375,7 @@ body {
         align-items: center;
 
         h2 {
-          color: #660000;
-          font-family: sans-serif;
+          @include text;
           
           @include for-smaller-screen-only {
             font-size: 20px;
@@ -263,25 +383,24 @@ body {
         }
 
         p {
-          color: #660000;
-          font-family: sans-serif;
+          @include text;
+        }
+
+        button {
+          width: 200px;
+          height: 40px;
+          font-weight: bold;
+          background-color: transparent;
+          border-radius: 15px;
+          border: 2px solid black;
+          cursor: pointer;
+        }
+
+        button:hover {
+          transition: 1.5s;
+          background-color: rgb(253, 248, 196);
         }
       }
-    }
-  }
-}
-
-.title {
-  width: 100%;
-  padding-top: 50px;
-  text-align: center;
-
-  h1 {
-    font-size: 50px;
-    color: maroon;
-
-    @include for-smaller-screen-only {
-      font-size: 30px;
     }
   }
 }
@@ -291,31 +410,9 @@ body {
   width: 100%;
 }
 
-button {
-  width: 200px;
-  height: 40px;
-  font-weight: bold;
-  border: none;
-  background-color: transparent;
-  border-radius: 15px;
-  border: 2px solid black;
-  cursor: pointer;
-}
-
-button:hover {
-  transition: 2s;
-  background-color: rgb(253, 248, 196);
-}
-
 #contactMe {
-  width: 100%;
-  margin: auto;
+  @include background;
   padding: 40px 0px;
-  background-color: seashell;
-
-  .title {
-    text-align: center;
-  }
 
   .contact-options {
     width: 50%;
@@ -343,18 +440,15 @@ button:hover {
 
     .contact-information {
       width: 100%;
-      display: flex;
+      
       div {
         display: flex;
         flex-direction: column;
 
         p {
-          padding-top: 14px;
-          color: black;
+          @include text;
+          padding-top: 13px;
           font-size: 22px;
-          font-family: sans-serif;
-          text-decoration: none;
-          color:  #660000;
           margin: 15px;
 
           @include for-smaller-screen-only {
@@ -364,97 +458,4 @@ button:hover {
       }
     }
   }
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: seashell;
-}
-
-@include for-desktop-only {    
-  .p-menu1 {
-    display: none;
-  }
-}
-
-@include for-smaller-screen-only {
-  .navbar {
-    display: none;
-  }
-
-  #navbar {
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 65px;
-    width: 100%;
-  }
-
-  /* Hamburger */
-  .hamburger1 {
-    height: 45px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hamburger1 div {
-    background-color: rgb(255, 255, 255);
-    position: relative;
-    width: 40px;
-    height: 5px;
-    margin-top: 7px;
-    transition: all 0.2s ease-in-out;
-  }
-
-  #toggle1 {
-    display: none;
-  }
-
-  #toggle1:checked + .hamburger1 .top {
-    transform: rotate(-45deg);
-    margin-top: 22.5px;
-  }
-
-  #toggle1:checked + .hamburger1 .meat {
-    transform: rotate(45deg);
-    margin-top: -5px;
-  }
-
-  #toggle1:checked + .hamburger1 .bottom {
-    transform: scale(0);
-  }
-
-  #toggle1:checked ~ .menu1 {
-    height: 205px;
-    width: 30%;
-  }
-
-  /* Menu */
-  .menu1 {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    height: 0px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-
-    a {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      margin-top: 15px;
-      font-size: 20px;
-      text-decoration: none;
-      color: white;
-    }
-
-    a:hover {
-      background-color: #fff;
-      color: rgb(61, 61, 61);
-      transition: all 0.3s ease;
-    }
-  }
-
 }
