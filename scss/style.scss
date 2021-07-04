@@ -374,6 +374,18 @@ footer {
         flex-direction: column;
         align-items: center;
 
+        p {
+          margin: 0;
+          align-self: flex-start;
+        }
+        ul {
+          margin: 5px;
+          align-self: flex-start;
+        }
+        li {
+          @include text;
+        }
+
         h2 {
           @include text;
           
@@ -394,6 +406,7 @@ footer {
           border-radius: 15px;
           border: 2px solid black;
           cursor: pointer;
+          margin-top: 15px;
         }
 
         button:hover {
