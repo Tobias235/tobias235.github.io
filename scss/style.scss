@@ -33,7 +33,7 @@
 }
 
 @mixin background {
-  width: 100%;
+  width: 101%;
   background-color: seashell;
 }
 
@@ -54,7 +54,6 @@ body {
   background-size: cover;
   height: 100vh;
   margin: 0;
-  overflow-x: hidden;
 }
 
 
