@@ -42,17 +42,16 @@
     font-family: sans-serif;
 }
 
-
 *,
 *::before *::after {
   box-sizing: border-box;
 }
 
 body {
-  background-image: url("../pictures/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 100vh;
+  background-image: url("../pictures/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0;
 }
 
