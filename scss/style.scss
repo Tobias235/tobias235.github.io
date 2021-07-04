@@ -1,5 +1,9 @@
-@mixin for-phone-only {
+@mixin for-smaller-screen-only {
   @media (max-width: 1160px) { @content; }
+}
+
+@mixin for-desktop-only {
+  @media (min-width: 1161px) { @content; }
 }
 
 *,
@@ -22,12 +26,26 @@ body {
   height: 80px;
   width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: rgba(0, 0, 0, 0.5);
 
+  div {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+  }
+}
+
   a:hover {
-    transition: 2s;
-    color: sandybrown;
+    transition: 1.5s;
+    color: black;
+    background-color: seashell;
+    border-radius: 10px;
   }
 }
 
@@ -36,7 +54,7 @@ body {
   height: 100%;
   margin: auto;
 
-  @include for-phone-only {    
+  @include for-smaller-screen-only {    
     text-align: center;
  }
 
@@ -48,6 +66,10 @@ body {
     font-size: 17px;
     font-family: "Kalam", cursive;
     color: seashell;
+
+    @include for-smaller-screen-only {    
+      height: 40%;
+    }
   }
 
   .main-text {
@@ -59,8 +81,13 @@ body {
     font-size: 30px;
     font-family: sans-serif, Arial;
     text-shadow: 3px 3px black;
-	color: white;
+	  color: white;
+    @include for-smaller-screen-only {    
+      font-size: 25px;
+      height: 40%;
+    }
   }
+
 
   .second-quote {
     width: 100%;
@@ -69,7 +96,7 @@ body {
     font-family: "Kalam", cursive;
     color: seashell;
 
-    @include for-phone-only {    
+    @include for-smaller-screen-only {    
       text-align: center;
    }
   }
@@ -108,13 +135,43 @@ body {
   padding: 20px 0px;
   background-color: seashell;
 
+
+  .profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content:  center;
+      align-items: center;
+    }
+
+    .profilePicture {
+      width: 15%;
+      border-radius: 180px;
+
+      @include for-smaller-screen-only {    
+        width: 25%;
+     }
+
+    }
+    
+    p {
+      margin: 0;
+    }
+  }
+
+
   .about-information {
     width: 50%;
     margin: auto;
     text-align: justify;
     text-justify: inter-word;
 
-    @include for-phone-only {    
+    @include for-smaller-screen-only {    
       width: 70%;
    }
 
@@ -162,7 +219,7 @@ body {
     display: flex;
     padding-bottom: 50px;
 
-    @include for-phone-only {    
+    @include for-smaller-screen-only {    
       width: 90%;
       align-items: center;
       flex-direction: column;
@@ -170,8 +227,8 @@ body {
 
 
    .project-picture {
-    @include for-phone-only {    
-      width: 400px;
+    @include for-smaller-screen-only {    
+      width: 360px;
    }
    }
 
@@ -183,7 +240,7 @@ body {
       text-align: justify;
       text-justify: inter-word;
 
-      @include for-phone-only {   
+      @include for-smaller-screen-only {   
         width: 50%; 
         margin: auto;
         align-items: center;
@@ -199,7 +256,7 @@ body {
           color: #660000;
           font-family: sans-serif;
           
-          @include for-phone-only {
+          @include for-smaller-screen-only {
             font-size: 20px;
           }
         }
@@ -222,7 +279,7 @@ body {
     font-size: 50px;
     color: maroon;
 
-    @include for-phone-only {
+    @include for-smaller-screen-only {
       font-size: 30px;
     }
   }
@@ -265,7 +322,7 @@ button:hover {
     display: flex;
     padding-bottom: 50px;
 
-    @include for-phone-only {
+    @include for-smaller-screen-only {
       width: 80%;
     }
 
@@ -299,7 +356,7 @@ button:hover {
           color:  #660000;
           margin: 15px;
 
-          @include for-phone-only {
+          @include for-smaller-screen-only {
             font-size: 18px;
           }
         }
@@ -308,10 +365,95 @@ button:hover {
   }
 }
 
-a {
-  font-size: 22px;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: white;
-  margin: 15px;
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: seashell;
+}
+
+@include for-desktop-only {    
+  .p-menu1 {
+    display: none;
+  }
+}
+
+@include for-smaller-screen-only {
+  .navbar {
+    display: none;
+  }
+
+  #navbar {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 65px;
+    width: 100%;
+  }
+
+  /* Hamburger */
+  .hamburger1 {
+    height: 45px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hamburger1 div {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    width: 40px;
+    height: 5px;
+    margin-top: 7px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  #toggle1 {
+    display: none;
+  }
+
+  #toggle1:checked + .hamburger1 .top {
+    transform: rotate(-45deg);
+    margin-top: 22.5px;
+  }
+
+  #toggle1:checked + .hamburger1 .meat {
+    transform: rotate(45deg);
+    margin-top: -5px;
+  }
+
+  #toggle1:checked + .hamburger1 .bottom {
+    transform: scale(0);
+  }
+
+  #toggle1:checked ~ .menu1 {
+    height: 205px;
+    width: 30%;
+  }
+
+  /* Menu */
+  .menu1 {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    a {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 15px;
+      font-size: 20px;
+      text-decoration: none;
+      color: white;
+    }
+
+    a:hover {
+      background-color: #fff;
+      color: rgb(61, 61, 61);
+      transition: all 0.3s ease;
+    }
+  }
+
 }
