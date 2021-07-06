@@ -337,7 +337,7 @@ footer {
     width: 50%;
     margin: auto;
     display: flex;
-    padding-bottom: 50px;
+    padding: 40px 0;
 
     @include for-smaller-screen-only {    
       width: 90%;
@@ -432,12 +432,13 @@ footer {
     padding-bottom: 50px;
 
     @include for-smaller-screen-only {
-      width: 90%;
+      width: 80%;
     }
 
     .icons {
       display: flex;
       flex-direction: column;
+      margin-right: 10px;
 
       a {
         margin: 0;
@@ -450,7 +451,7 @@ footer {
     }
 
     .contact-information {
-      width: 60%;
+      width: 90%;
       
       div {
         display: flex;
@@ -458,13 +459,14 @@ footer {
 
         p {
           @include text;
-          padding-top: 7px;
           font-size: 22px;
-          margin-top: 15px;
-          margin-left: 20px;
+          word-wrap: break-word;
+          margin-top: 16px;
 
           @include for-smaller-screen-only {
             font-size: 18px;
+            padding-top: 8px;
+            margin-top: 14px;
           }
         }
       }
