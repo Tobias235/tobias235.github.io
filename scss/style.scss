@@ -38,10 +38,9 @@
 }
 
 @mixin text {
-    color: #660000;
-    font-family: sans-serif;
+  color: #660000;
+  font-family: sans-serif;
 }
-
 
 *,
 *::before *::after {
@@ -50,14 +49,13 @@
 }
 
 body {
-  height:100vh;
+  height: 100vh;
   background-image: url(../pictures/background.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   margin: 0;
 }
-
 
 .navbar {
   position: fixed;
@@ -94,7 +92,6 @@ footer {
   align-items: center;
   background-color: seashell;
 }
-
 
 @include for-desktop-only {
   .p-menu1 {
@@ -210,7 +207,7 @@ footer {
       font-size: 25px;
       height: 38%;
     }
-    
+
     h2 {
       font-size: 25px;
       @include main-text;
@@ -263,30 +260,28 @@ footer {
   }
 }
 
-
 #aboutMe {
   @include background;
 
-    .profile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .profilePicture {
       width: 12%;
       border-radius: 180px;
       margin-bottom: 5px;
 
-      @include for-smaller-screen-only {    
+      @include for-smaller-screen-only {
         width: 25%;
-     }
+      }
     }
-    
+
     p {
       margin: 0;
     }
   }
-
 
   .about-information {
     width: 50%;
@@ -294,26 +289,26 @@ footer {
     text-align: justify;
     text-justify: inter-word;
 
-    @include for-smaller-screen-only {    
+    @include for-smaller-screen-only {
       width: 70%;
-   }
+    }
 
     p {
       @include text;
-    text-indent: 40px;
-    font-size: 18px;
-
-    a {
-      @include text;
+      text-indent: 40px;
       font-size: 18px;
-      margin: 0;
-      text-decoration: underline;
-    }
+
+      a {
+        @include text;
+        font-size: 18px;
+        margin: 0;
+        text-decoration: underline;
+      }
     }
 
     h1 {
-        text-align: center;
-        color: maroon;
+      text-align: center;
+      color: maroon;
     }
 
     .technical-skills-box {
@@ -328,29 +323,26 @@ footer {
   }
 }
 
-
 #projects {
-@include background;
-
+  @include background;
 
   .projects-container {
-    width: 50%;
+    width: 70%;
     margin: auto;
     display: flex;
     padding: 40px 0;
 
-    @include for-smaller-screen-only {    
+    @include for-smaller-screen-only {
       width: 90%;
       align-items: center;
       flex-direction: column;
-   }
+    }
 
-
-   .project-picture {
-    @include for-smaller-screen-only {    
-      width: 360px;
-   }
-   }
+    .project-picture {
+      @include for-smaller-screen-only {
+        width: 360px;
+      }
+    }
 
     .project-information {
       width: 30%;
@@ -360,12 +352,12 @@ footer {
       text-align: justify;
       text-justify: inter-word;
 
-      @include for-smaller-screen-only {   
-        width: 50%; 
+      @include for-smaller-screen-only {
+        width: 50%;
         margin: auto;
         align-items: center;
         padding-left: 0;
-     }
+      }
 
       div {
         display: flex;
@@ -386,7 +378,7 @@ footer {
 
         h2 {
           @include text;
-          
+
           @include for-smaller-screen-only {
             font-size: 20px;
           }
@@ -396,15 +388,20 @@ footer {
           @include text;
         }
 
+        .btns {
+          display: flex;
+          flex-direction: row;
+        }
+
         button {
-          width: 200px;
+          width: 150px;
           height: 40px;
           font-weight: bold;
           background-color: transparent;
           border-radius: 15px;
           border: 2px solid black;
           cursor: pointer;
-          margin-top: 15px;
+          margin: 10px;
         }
 
         button:hover {
@@ -452,7 +449,7 @@ footer {
 
     .contact-information {
       width: 90%;
-      
+
       div {
         display: flex;
         flex-direction: column;
