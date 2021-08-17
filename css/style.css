@@ -317,7 +317,7 @@ footer {
 }
 
 #projects .projects-container {
-  width: 50%;
+  width: 65%;
   margin: auto;
   display: flex;
   padding: 40px 0;
@@ -392,15 +392,20 @@ footer {
   font-family: sans-serif;
 }
 
+#projects .projects-container .project-information div .btns {
+  display: flex;
+  flex-direction: row;
+}
+
 #projects .projects-container .project-information div button {
-  width: 200px;
+  width: 150px;
   height: 40px;
   font-weight: bold;
   background-color: transparent;
   border-radius: 15px;
   border: 2px solid black;
   cursor: pointer;
-  margin-top: 15px;
+  margin: 10px;
 }
 
 #projects .projects-container .project-information div button:hover {
