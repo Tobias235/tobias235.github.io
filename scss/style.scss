@@ -91,6 +91,15 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: seashell;
+
+  p {
+    font-size: 16px;
+    font-weight: bold;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
 }
 
 @include for-desktop-only {
