@@ -296,7 +296,6 @@ footer {
     width: 50%;
     margin: auto;
     text-align: justify;
-    text-justify: inter-word;
 
     @include for-smaller-screen-only {
       width: 70%;
@@ -306,6 +305,7 @@ footer {
       @include text;
       text-indent: 40px;
       font-size: 18px;
+      text-align: justify;
 
       a {
         @include text;
