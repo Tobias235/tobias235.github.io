@@ -349,7 +349,7 @@ footer {
 
     .project-picture {
       @include for-smaller-screen-only {
-        width: 360px;
+        width: 100%;
       }
     }
 
@@ -362,7 +362,7 @@ footer {
       text-justify: inter-word;
 
       @include for-smaller-screen-only {
-        width: 50%;
+        width: 100%;
         margin: auto;
         align-items: center;
         padding-left: 0;
