@@ -298,11 +298,13 @@ footer {
     text-align: justify;
 
     @include for-smaller-screen-only {
-      width: 70%;
+      width: 100%;
     }
 
     p {
       @include text;
+      width: 90%;
+      margin: auto;
       text-indent: 40px;
       font-size: 18px;
       text-align: justify;
@@ -322,7 +324,7 @@ footer {
 
     .technical-skills-box {
       width: 100%;
-      height: 75px;
+      height: 70px;
       margin: auto;
       display: flex;
       justify-content: center;
