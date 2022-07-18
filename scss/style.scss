@@ -288,7 +288,10 @@ footer {
     }
 
     p {
-      margin: 0;
+      font-size: 24px;
+      color: maroon;
+      font-weight: bold;
+      margin: 5px;
     }
   }
 
@@ -296,6 +299,7 @@ footer {
     width: 50%;
     margin: auto;
     text-align: justify;
+    margin-top: 25px;
 
     @include for-smaller-screen-only {
       width: 100%;
