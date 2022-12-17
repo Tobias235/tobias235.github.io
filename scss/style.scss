@@ -327,12 +327,16 @@ footer {
     }
 
     .technical-skills-box {
-      width: 100%;
+      width: 90%;
       height: 70px;
       display: flex;
       justify-content: center;
-      margin: 0;
-      padding-bottom: 35px;
+      margin: auto;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
     }
   }
 }
