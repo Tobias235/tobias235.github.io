@@ -336,6 +336,11 @@ footer {
       img {
         width: 60px;
         height: 60px;
+        margin: 7px;
+        @include for-smaller-screen-only {
+          width: 45px;
+          height: 45px;
+        }
       }
     }
   }
